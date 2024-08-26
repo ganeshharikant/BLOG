@@ -13,6 +13,11 @@ app.use(express.static(path.join(__dirname, "public")));
 app.use(express.urlencoded({ extended: true }));
 app.use(methodOverride('X-HTTP-Method-Override'));
 app.use(methodOverride('_method'));
+
+app.use((req, res, next) => {
+    res.locals.BASE_URL = process.env.BASE_URL || 'http://localhost:5000'; // Fallback URL for local development
+    next();
+});
 let posts = [
 
     {  id:uuidv4(),

@@ -4,47 +4,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>main page</title>
+    <title>Main Page</title>
     <link rel="stylesheet" href="/style.css">
 </head>
-<nav class ="hello">
-<div></div>
-<div></div>
-<div></div>
-<div></div>
-<div></div>
-<div></div>
-
-
+<nav class="hello">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
 </nav>
 <body>
-    <h1>blog section</h1>
+    <h1>Blog Section</h1>
     <br>
-   <% for(post of posts){%>
+    <% for (post of posts) { %>
     <div class="tag-section">
-           
-        <h2  class="heading">@ <%=post.username %> </h2>
-        <h3 class ="cont"> <%=post.content %> </h3>
+        <h2 class="heading">@ <%= post.username %></h2>
+        <h3 class="cont"> <%= post.content %> </h3>
         <br>
-        <a href="http://localhost:5000/posts/<%=post.id%>">
+        <a href="/posts/<%= post.id %>">
             <button class="btn1">Post Details</button>
         </a>
         <br>
-        <a href="http://localhost:5000/posts/<%=post.id%>/edit">
-            <button class="btn1">edit Details</button>
+        <a href="/posts/<%= post.id %>/edit">
+            <button class="btn1">Edit Details</button>
         </a>
         <br>
-        <form method="post" action= "/posts/<%=post.id%>?_method=DELETE">
-       
-            <button class="btn1">delete Details</button>
-      
-        
-    </form>
-       
+        <form method="post" action="/posts/<%= post.id %>?_method=DELETE">
+            <button class="btn1">Delete Details</button>
+        </form>
     </div>
     <br>
-   <% } %>
-
+    <% } %>
 </body>
-<button class="btn" ><a href="http://localhost:5000/posts/new"> new post </a></button>
+<button class="btn"><a href="/posts/new">New Post</a></button>
 </html>
