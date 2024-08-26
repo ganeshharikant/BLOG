@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/style.css">
+    <style>
+        h2{
+
+        text-align: center;
+        }
+    </style>
+</head>`
+<body>
+ 
+    <div class="tag-section">
+     <h1>Start Editing Your</h1>
+    <h2  class="heading">@ <%=post.username %> </h2>
+  <form method="post" action ="/posts/<%=post.id%>?_method=PATCH">
+
+    <textarea rows="10" coloumn="35" name="content" ><%=post.content %></textarea>
+    <button class="btn"> submit</button>
+    
+  </form>
+ 
+
+
+
+
+</div>  
+</body>
+</html>

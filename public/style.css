@@ -1,0 +1,114 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f5;
+    color: #333;
+    line-height: 1.6;
+}
+
+h1 {
+    text-align: center;
+    color: rgb(126, 34, 206);
+    margin-bottom: 20px;
+    font-size: 2.5em;
+    font-weight: bold;
+}
+
+.tag-section, .tag-section1 {
+    background-color: white;
+    border: 2px solid rgba(126, 34, 206, 0.6);
+    padding: 15px;
+    margin: 20px auto;
+    width: 80%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.tag-section:hover, .tag-section1:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.heading {
+    color: rgb(126, 34, 206); 
+    font-size: 1.8em;
+    margin-bottom: 10px;
+ 
+}
+
+.cont {
+    font-size: 1.2em;
+    color: #555;
+}
+
+input[type="text"], textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid rgba(126, 34, 206, 0.6);
+    border-radius: 5px;
+    font-size: 1em;
+    color: #333;
+}
+
+button {
+    background-color: rgb(126, 34, 206);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: rgb(96, 24, 166);
+}
+
+
+.tag-section1 form h2 {
+    margin-top: 15px;
+}
+
+.btn {
+    background-color: rgb(126, 34, 206);
+    color: white;
+ border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+   margin: 20px auto;
+    display: block;
+text-decoration: none;
+}
+
+.btn a {
+    color: white;
+    text-decoration: none;
+}
+.btn1 {
+    background-color: rgb(126, 34, 206);
+    color: white;
+ border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+   margin: 20px auto;
+
+text-decoration: none;
+}
+
+.btn1 a {
+    color: white;
+    text-decoration: none;
+}
+
+.btn:hover {
+    background-color: rgb(96, 24, 166); 
+}
