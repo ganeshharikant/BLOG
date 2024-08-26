@@ -23,20 +23,18 @@
         <h2 class="heading">@ <%= post.username %></h2>
         <h3 class="cont"> <%= post.content %> </h3>
         <br>
-        <a href="/posts/<%= post.id %>">
+        <a href="<%= baseUrl %>/posts/<%= post.id %>">
             <button class="btn1">Post Details</button>
         </a>
-        <br>
-        <a href="/posts/<%= post.id %>/edit">
+        <a href="<%= baseUrl %>/posts/<%= post.id %>/edit">
             <button class="btn1">Edit Details</button>
         </a>
-        <br>
-        <form method="post" action="/posts/<%= post.id %>?_method=DELETE">
+        <form method="post" action="<%= baseUrl %>/posts/<%= post.id %>?_method=DELETE">
             <button class="btn1">Delete Details</button>
         </form>
     </div>
     <br>
     <% } %>
 </body>
-<button class="btn"><a href="/posts/new">New Post</a></button>
+<button class="btn"><a href="<%= baseUrl %>/posts/new">New Post</a></button>
 </html>

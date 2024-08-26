@@ -3,6 +3,7 @@ const app = express();
 const port = 5000;
 const { v4: uuidv4 } = require('uuid');
 var methodOverride = require('method-override')
+const appBaseUrl = process.env.APP_BASE_URL || 'http://localhost:5000'; // Fallback for local development
 
 
 const path = require("path");
@@ -18,6 +19,11 @@ app.use((req, res, next) => {
     res.locals.BASE_URL = process.env.BASE_URL || 'http://localhost:5000'; // Fallback URL for local development
     next();
 });
+
+app.get('/', (req, res) => {
+    res.render('index.ejs', { posts, baseUrl: appBaseUrl });
+});
+
 let posts = [
 
     {  id:uuidv4(),
@@ -33,6 +39,10 @@ let posts = [
 
 ];
 
+
+app.get('/', (req, res) => {
+    res.render('index', { posts }); // Render the index.ejs template with posts data
+});
 app.get("/posts", (req, res) => {
      res.render("index.ejs",{posts});
 
