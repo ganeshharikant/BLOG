@@ -1,24 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Main Page</title>
     <link rel="stylesheet" href="/style.css">
 </head>
-<nav class="hello">
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-</nav>
 <body>
+    <nav class="hello">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </nav>
     <h1>Blog Section</h1>
     <br>
-    <% for (post of posts) { %>
+    <% for (const post of posts) { %>
     <div class="tag-section">
         <h2 class="heading">@ <%= post.username %></h2>
         <h3 class="cont"> <%= post.content %> </h3>
@@ -35,6 +34,6 @@
     </div>
     <br>
     <% } %>
+    <button class="btn"><a href="<%= baseUrl %>/posts/new">New Post</a></button>
 </body>
-<button class="btn"><a href="<%= baseUrl %>/posts/new">New Post</a></button>
 </html>
